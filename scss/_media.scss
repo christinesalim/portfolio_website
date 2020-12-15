@@ -1,0 +1,137 @@
+
+// Smartphones and tablets
+@media (max-width: 800px)  { 
+  //Nav bar
+  #header {    
+    &-inner {
+      height: 4rem;
+      .container {
+        padding: 0.1rem;
+
+        #main-nav{
+          li {
+            padding: 1rem 1rem;
+          }          
+        }
+       
+      }
+      #logo{
+        display:none;
+      }
+
+
+    }
+  }
+  //Home
+  #home {
+    // Home Section A
+    &-a .container .bio,
+    &-a .container .specials{     
+      color: blue;
+      #profile_img{
+        width: 100%;
+        max-width: 350;
+        height: auto;
+      }
+      display: grid;
+      grid-template-columns: repeat(1,auto);
+      gap: 1rem;
+      justify-items: center;
+      align-items: center;
+
+
+      //Specials border
+      div {        
+        border-bottom: 1px $complementary-color solid;
+        padding-bottom: 1rem;
+
+        &:last-child {
+          border: none;
+          padding-bottom: 0;
+        }
+      }
+    }    
+        
+  }
+ 
+  //Stack items on Work page
+  #work-a .container .items {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  
+  // Contact
+  #contact {
+    &-a {
+      .text-fields {
+        grid-template-areas:
+          'name'
+          'subject'
+          'email'
+          'phone'
+          'message';
+      }
+      
+    }
+
+   
+  }
+
+  // Footer
+  #main-footer {
+    .footer-content {
+      flex-direction: column;
+      padding: 0.5rem;
+      height: 4rem;
+    }
+  }
+}
+
+// Landscape
+@media (max-height: 550px) {
+  #header-home {
+    .header-content {
+      padding-top: 3rem;
+      color: red; //to test
+    }
+  }
+
+
+  //Work page
+  #work{
+    &-a {
+      padding-top: 0.5rem;
+      .container{
+        .section-title, 
+        .bottom-line {
+          display: none;
+        }
+
+        .items {
+          display: grid;
+          grid-template-columns: repeat(3,1fr);
+         
+        }
+        .item {
+          &-text-title {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+  
+
+}
+
+@media (max-height: 330px) {
+  #header-home {
+    .header-content {
+      color: pink; //to test
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  }
+}
