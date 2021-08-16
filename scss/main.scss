@@ -262,9 +262,12 @@ img {
       line-height: 20px;
       text-align: center;
       padding: 0.5rem;
+      background: $main-color;
+      color: $dark-color;
 
       &:hover {
-        background: $main-color;
+        background: $medium-color;
+        color: $dark-color;
       }
     }
   }
